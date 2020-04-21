@@ -18,4 +18,9 @@ class CaesarCipher{
         return entered.contains("2");
     }
 
+    public String toLowercase (String enteredMix ){
+        String converted = enteredMix.toLowerCase();
+        return converted;
+    }
+
 }
