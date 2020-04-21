@@ -21,7 +21,7 @@ public class AppCeasarCipher{
                     System.out.println("Here we take a message and encode it so that unwanted eyes do not see it!");
                     System.out.println("-------------------------------------------------------------------------");
                     System.out.print("Enter the message you would like us to encode: ");
-                        String enteredInput = myC.readLine();
+                        String enteredInput = (myC.readLine()).toLowerCase();
 
                     System.out.print("Enter the key (1-25) that you would like us to encode your message with: ");
                         int enteredKey = Integer.parseInt(myC.readLine());
@@ -34,15 +34,23 @@ public class AppCeasarCipher{
 
                         System.out.println("Your encrypted message: " + encryptedOutput);
 
-                        System.out.println("Would you also like to decode the message? \n 1. Yes \n 2. No? ");
+                        System.out.print("Would you also like to decrypt the same message? \n 1. Yes \n 2. No? ");
                             int decyptOption = Integer.parseInt(myC.readLine());
 
                             if ( decyptOption == 1) {
 
-//                                String decryptedMessage = encryptedOutput.decryptMessage(encryptedOutput);
+                                String decryptedMessage = newCipher.decryptEncoded(encryptedOutput, enteredKey);
 
-//                                System.out.println("----------------------- \n Your decrypted message is: " + decryptedMessage);
+                                System.out.println("----------------------- \n Your decrypted message is: " + decryptedMessage);
+                            }else if ( decyptOption ==2 ){
+
+                                System.out.println("Ok then! We will not decrypt it.");
+                                System.out.println("Thank you for using ENCODE_DECODE! Come back soon.");
+
+                            }else {
+                                System.out.println("Not a valid option!");
                             }
+
                 }
                 else if ( choice == 2 ){
                     System.out.println("Thank you for using ENCODE_DECODE! Come back soon.");

@@ -35,9 +35,9 @@ class CaesarCipher{
 
                 char c = (char)(ch + shiftKey);
 
-                if ( c > 'z'){
+                if ( ch == 32 ){
 
-                    ciphered += (char)(ch - (26 - shiftKey));
+                    ciphered += " ";
                 }
 
                 else if ( Character.isAlphabetic(ch)) {
@@ -56,9 +56,9 @@ class CaesarCipher{
 
             char c = (char)(ch - shiftKey);
 
-            if ( ch < 'a'){
+            if ( ch == 32 ){
 
-                deciphered += (char)(ch + (26 - shiftKey));
+                deciphered += " ";
 
             }else {
 
