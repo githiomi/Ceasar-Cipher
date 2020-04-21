@@ -14,4 +14,8 @@ class CaesarCipher{
         return mToEncode;
     }
 
+    public boolean checkString ( String entered ){
+        return entered.contains("2");
+    }
+
 }

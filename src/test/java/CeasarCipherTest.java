@@ -15,7 +15,13 @@ public class CeasarCipherTest {
     @Test
     public void encodeCaesarCipher_acceptStringInput_string() {
         CaesarCipher caesarCipherInput = new CaesarCipher();
-        assertEquals("Daniel is very cool", caesarCipherInput.inputToEncode("Daniel is very cool"));
+        assertEquals( "Daniel is very cool", caesarCipherInput.inputToEncode("Daniel is very cool"));
+    }
+
+    @Test
+    public void encodeCaesarCipher_checksOnlyString_true() {
+        CaesarCipher caesarCipherString = new CaesarCipher();
+        assertEquals(true, caesarCipherString.checkString("Daniel is 2 cool"));
     }
 
 }
