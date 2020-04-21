@@ -3,6 +3,10 @@ class CaesarCipher{
     private int mKey;
     private String mToEncode;
 
+    public CaesarCipher( String plainText, int shiftKey){
+        this.mKey = shiftKey;
+        this.mToEncode = plainText;
+    }
 
     public int getKey(int newKey){
         this.mKey = newKey;
@@ -23,15 +27,20 @@ class CaesarCipher{
         return converted;
     }
 
-    public String encodeToKey (String encodeToOne ){
-        int shiftKey = 2;
-        String ciphered = "";
+    public String encodeToKey (String encodeToOne, int shiftKey ){
+        String ciphered = " ";
         int length = encodeToOne.length();
             for (int i = 0; i < length; i += 1){
                 char ch = encodeToOne.charAt(i);
-                char c = (char)(ch+shiftKey);
+                if ( ch > 'z'){
 
-                ciphered += c;
+                    ciphered += (char)(ch - (26 - shiftKey));
+                }
+                else if ( Character.isAlphabetic(ch)) {
+                    char c = (char)(ch + shiftKey);
+
+                    ciphered += c;
+                }
             }
         return ciphered;
     }

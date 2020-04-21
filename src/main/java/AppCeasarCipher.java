@@ -30,7 +30,19 @@ public class AppCeasarCipher{
                     System.out.println("----------------------------------------");
 
                     CaesarCipher newCipher = new CaesarCipher(enteredInput, enteredKey);
-                        newCipher.encodeToKey();
+                        String encryptedOutput = newCipher.encodeToKey(enteredInput, enteredKey);
+
+                        System.out.println("Your encrypted message: " + encryptedOutput);
+
+                        System.out.println("Would you also like to decode the message? \n 1. Yes \n 2. No? ");
+                            int decyptOption = Integer.parseInt(myC.readLine());
+
+                            if ( decyptOption == 1) {
+
+//                                String decryptedMessage = encryptedOutput.decryptMessage(encryptedOutput);
+
+//                                System.out.println("----------------------- \n Your decrypted message is: " + decryptedMessage);
+                            }
                 }
                 else if ( choice == 2 ){
                     System.out.println("Thank you for using ENCODE_DECODE! Come back soon.");
