@@ -30,10 +30,10 @@ public class CeasarCipherTest {
         assertEquals("daniel", caesarCipherLowercase.toLowercase("Daniel"));
     }
 
-//    @Test
-//    public void encodeCaesarCipher_encodeWithKey1_string() {
-//        CaesarCipher caesarCipherEncode1 = new CaesarCipher();
-//        assertEquals("ebojfm", caesarCipherEncode1.encodeToOne("daniel"));
-//    }
+    @Test
+    public void encodeCaesarCipher_encodeWithKey1_string() {
+        CaesarCipher caesarCipherEncode1 = new CaesarCipher();
+        assertEquals("fcpkgn", caesarCipherEncode1.encodeToKey("daniel"));
+    }
 
 }

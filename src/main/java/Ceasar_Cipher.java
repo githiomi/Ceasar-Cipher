@@ -23,10 +23,17 @@ class CaesarCipher{
         return converted;
     }
 
-    public String encodeTo1 (String encodeToOne ){
-        String allLetters = "abcdefghijklmnopqrstuvwxyz";
-//        String encoded = allLetters.split(" ");
-        return null;
+    public String encodeToKey (String encodeToOne ){
+        int shiftKey = 2;
+        String ciphered = "";
+        int length = encodeToOne.length();
+            for (int i = 0; i < length; i += 1){
+                char ch = encodeToOne.charAt(i);
+                char c = (char)(ch+shiftKey);
+
+                ciphered += c;
+            }
+        return ciphered;
     }
 
 }

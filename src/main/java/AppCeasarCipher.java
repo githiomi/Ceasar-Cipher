@@ -28,6 +28,9 @@ public class AppCeasarCipher{
 
                     System.out.println("We are going to encode: '" + enteredInput + "' using the key: " + enteredKey);
                     System.out.println("----------------------------------------");
+
+                    CaesarCipher newCipher = new CaesarCipher(enteredInput, enteredKey);
+                        newCipher.encodeToKey();
                 }
                 else if ( choice == 2 ){
                     System.out.println("Thank you for using ENCODE_DECODE! Come back soon.");
