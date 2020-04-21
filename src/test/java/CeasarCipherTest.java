@@ -37,6 +37,9 @@ public class CeasarCipherTest {
     }
 
     @Test
-    public void encodeC
+    public void encodeCaesarCipher_decodeTheInput_string() {
+        CaesarCipher caesarCipherDecrypt = new CaesarCipher("fcpkgn", 2);
+        assertEquals("daniel", caesarCipherDecrypt.decryptEncoded("fcpkgn", 2));
+    }
 
 }

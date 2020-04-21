@@ -28,21 +28,45 @@ class CaesarCipher{
     }
 
     public String encodeToKey (String encodeToOne, int shiftKey ){
-        String ciphered = " ";
+        String ciphered = "";
         int length = encodeToOne.length();
             for (int i = 0; i < length; i += 1){
                 char ch = encodeToOne.charAt(i);
-                if ( ch > 'z'){
+
+                char c = (char)(ch + shiftKey);
+
+                if ( c > 'z'){
 
                     ciphered += (char)(ch - (26 - shiftKey));
                 }
+
                 else if ( Character.isAlphabetic(ch)) {
-                    char c = (char)(ch + shiftKey);
 
                     ciphered += c;
                 }
             }
         return ciphered;
+    }
+
+    public String decryptEncoded (String encodedAlready, int shiftKey ){
+        String deciphered = "";
+        int length = encodedAlready.length();
+        for ( int z = 0; z < length; z += 1){
+            char ch = encodedAlready.charAt(z);
+
+            char c = (char)(ch - shiftKey);
+
+            if ( ch < 'a'){
+
+                deciphered += (char)(ch + (26 - shiftKey));
+
+            }else {
+
+                deciphered += c;
+
+            }
+        }
+        return deciphered;
     }
 
 }
