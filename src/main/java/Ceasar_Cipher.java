@@ -23,4 +23,10 @@ class CaesarCipher{
         return converted;
     }
 
+    public String encodeTo1 (String encodeToOne ){
+        String allLetters = "abcdefghijklmnopqrstuvwxyz";
+//        String encoded = allLetters.split(" ");
+        return null;
+    }
+
 }
