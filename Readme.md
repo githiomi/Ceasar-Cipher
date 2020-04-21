@@ -33,10 +33,10 @@ It is made completly using sublime Text 3 where all the following files were cre
 No bugs to report at the moment! the system works efficiently at 100% guaranteed. Feel free to search the output on googl to ensure that it coincides exactly.
 
 ## Link to live page
-[Click-Here](https://githiomi.github.io/Quotevine)
+[No-Live-Link-Available](https://github.com/githiomi/Ceasar-Cipher)
 
 ## Setup Instructions
-* git clone [This](https://githiomi.github.io/Quotevine) into your terminal.  
+* git clone [this](https://github.com/githiomi/Ceasar-Cipher) into your terminal.  
 * Open the folder in your favourite editor, for example IntelliJ or Eclipse. 
 * Run the app.
 * Enjoy Caesar Cipher encoding app.
