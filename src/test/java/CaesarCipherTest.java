@@ -4,7 +4,7 @@ import org.junit.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CeasarCipherTest {
+public class CaesarCipherTest {
 
     @Test
     public void encodeCaesarCipher_acceptKeyFromUser_int() {
